@@ -6,8 +6,8 @@ CHUTES_API_URL = "https://llm.chutes.ai/v1/chat/completions"
 MODEL_NAME = "deepseek-ai/DeepSeek-V3-0324" # Set your model here
 SERVER_PORT = 11435
 DEFAULT_SYSTEM_PROMPT = """ Ex)You are a helpful assistant """ #Default system prompt, or None if not desired
-MAX_HISTORY_MESSAGES = 20 # Max conversation messages to keep, set -1 for unlimited
-DEBUG_MODE = True
+MAX_HISTORY_MESSAGES = -1 # Max conversation messages to keep, set -1 for unlimited
+DEBUG_MODE = False
 
 # --- LLM Generation Parameter Defaults ---
 # These values are used if the client does not provide them.
