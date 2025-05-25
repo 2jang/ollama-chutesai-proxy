@@ -6,7 +6,7 @@
     An Ollama-compatible API proxy server that interfaces with Chutes.ai's LLM services.
   </p>
 
-<p>:earth_americas: <a href="https://github.com/2jang/ollama-chutesai-proxy">English</a> | <a href="https://github.com/2jang/ollama-chutesai-proxy/blob/main/README-ko.md">한국어 (Korean)</a></p>
+<p>:earth_americas: <a href="https://github.com/2jang/ollama-chutesai-proxy">English</a> | <a href="https://github.com/2jang/ollama-chutesai-proxy/blob/main/README-ko.md">한국어</a></p>
 
 </div>
 
