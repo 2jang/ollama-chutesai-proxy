@@ -47,6 +47,10 @@ The server handles request transformation, parameter mapping, system prompt inje
 - **Configuration via `config.py`:** Easy setup for API tokens, model names, server ports, and default LLM parameters.
 - **Streaming Support:** Handles streaming responses from Chutes.ai to the client.
 
+### ❓: What is chutes.ai?
+Chutes.ai is a service that allows you to use LLM models by requesting an API for free.  
+The majority of models are free so feel free to use.
+
 ## :toolbox: Getting Started
 
 Follow these steps to get the proxy server up and running on your local machine.
