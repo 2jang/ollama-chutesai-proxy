@@ -6,7 +6,7 @@
     Chutes.ai의 LLM 서비스와 인터페이스하는 Ollama 호환 API 프록시 서버입니다.
   </p>
 
-<p>:earth_americas: <a href="https://github.com/2jang/ollama-chutesai-proxy">English</a> | <a href="https://github.com/2jang/ollama-chutesai-proxy/blob/main/README-ko.md">한국어 (Korean)</a></p>
+<p>:earth_americas: <a href="https://github.com/2jang/ollama-chutesai-proxy">English</a> | <a href="https://github.com/2jang/ollama-chutesai-proxy/blob/main/README-ko.md">한국어</a></p>
 
 </div>
 
