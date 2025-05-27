@@ -1,84 +1,60 @@
 <div align="center">
 
-  <h1>Ollama-Chutes.ai Proxy Server</h1>
+<h1>Ollama-Chutes.ai Proxy Server ↔️☁️</h1>
 
-  <p>
-    An Ollama-compatible API proxy server that interfaces with Chutes.ai's LLM services.
-  </p>
-
+<p>
+  An Ollama-compatible API proxy server that interfaces with Chutes.ai's LLM services.
+</p>
 <p>:earth_americas: <a href="https://github.com/2jang/ollama-chutesai-proxy">English</a> | <a href="https://github.com/2jang/ollama-chutesai-proxy/blob/main/README-ko.md">한국어</a></p>
 
 </div>
 
+[![Python](https://img.shields.io/badge/Python-3.8+-3776AB?style=for-the-badge&logo=python&logoColor=white)]([https://www.python.org/](https://www.python.org/))
+
 <br />
 
-# :notebook_with_decorative_cover: Table of Contents
-
-- [About the Project](#star2-about-the-project)
-    * [Tech Stack](#space_invader-tech-stack)
-    * [Features](#dart-features)
-- [Getting Started](#toolbox-getting-started)
-    * [Prerequisites](#bangbang-prerequisites)
-    * [Installation](#gear-installation)
-    * [Configuration](#key-configuration-configpy)
-    * [Run](#running-run-locally)
-- [Connecting from a WebUI](#desktop_computer-connecting-from-a-webui)
-
-
-
-## :star2: About the Project
-
-This project is an asynchronous API server built with Python and `aiohttp`. It acts as a proxy, providing an Ollama-compatible interface that forwards requests to Chutes.ai's Large Language Model (LLM) services. This allows users to interact with Chutes.ai models using clients for Ollama(WebUI).
+This project is an asynchronous API server built with Python and `aiohttp`. It acts as a proxy, providing an Ollama-compatible interface that forwards requests to Chutes.ai's LLM services.
+This allows users to interact with Chutes.ai models using clients designed for Ollama (like WebUIs). 🚀
 
 The server handles request transformation, parameter mapping, system prompt injection, message history management, and streams responses back to the client in the Ollama format.
 
-### :space_invader: Tech Stack
+## ✨ Key Features
 
-<ul>
-  <li><a href="https://www.python.org/">Python</a></li>
-  <li><a href="https://docs.aiohttp.org/en/stable/">aiohttp</a> (for asynchronous HTTP client/server)</li>
-  <li><a href="https://docs.python.org/3/library/asyncio.html">asyncio</a> (for asynchronous programming)</li>
-</ul>
+- ⚙️ **Easy Configuration**: Setup via `config.py` for API tokens, model names, server port, and default LLM parameters.
+- 💨 **Streaming Support**: Handles streaming responses from Chutes.ai and delivers them to the client.
 
-### :dart: Features
+## ❓ What is Chutes.ai?
 
-- **Ollama Compatibility:** Implements key Ollama API endpoints
-- **Chutes.ai API:** Seamlessly routes requests to the configured Chutes.ai API.
-- **Configuration via `config.py`:** Easy setup for API tokens, model names, server ports, and default LLM parameters.
-- **Streaming Support:** Handles streaming responses from Chutes.ai to the client.
+Chutes.ai is a service that allows you to use various LLMs by making API requests. Many of their models are available for free. Feel free to explore their models!
 
-### ❓: What is chutes.ai?
-Chutes.ai is a service that allows you to use LLM models by requesting an API for free.  
-The majority of models are free so feel free to use.
+## 🚀 Getting Started
 
-## :toolbox: Getting Started
+### 📋 Prerequisites
 
-Follow these steps to get the proxy server up and running on your local machine.
+-   **Python**: Make sure you have Python 3.8+ installed.
+-   **pip**: Python's package installer, usually comes with Python.
+-   **Chutes.ai API Key**: Obtain an API Key from [Chutes.ai](https://chutes.ai/app/api). This is **required**.
 
-### :bangbang: Prerequisites
+### 🛠️ Installation Steps
 
-- Make sure you have Python 3.8+ installed. You'll also need `pip` for installing packages.
-- Get a API Keys for Chutes.ai https://chutes.ai/app/api
-
-### :gear: Installation
-
-1.  Clone the repository (if you haven't already):
+1.  **Clone the repository**:
     ```bash
     git clone https://github.com/2jang/ollama-chutesai-proxy.git
-    cd ollama-chutesai-proxy 
+    cd ollama-chutesai-proxy
     ```
 
-2.  Install the required Python packages:
+2.  **Install required Python packages**:
     ```bash
     pip install aiohttp
     ```
 
-### :key: Configuration (`config.py`)
+### 🔑 Configuration (`config.py`)
 
-Before running the server, you need to configure it.  
-Edit `config.py` and fill in the required and optional parameters. At a minimum, you **must** provide your `API_TOKEN`.
+Before running the server, you **must** configure it.  
+Edit the `config.py` file and fill in the required and optional parameters.
 
-### :running: Run Locally
+**Required:**
+* `API_TOKEN`: Your Chutes.ai API token.
 
 Once configured and dependencies are installed, you can start the server:
 
@@ -86,12 +62,12 @@ Once configured and dependencies are installed, you can start the server:
 python main.py
 ```
 
-### :desktop_computer: Connecting from a WebUI
+## 🖥️ Connecting from a WebUI
 
-If you are using a WebUI that supports connecting to an Ollama API endpoint, you can configure it to use this proxy server.
+If you are using a WebUI that supports connecting to an Ollama API endpoint (like Ollama WebUI, Open WebUI, etc.), you can configure it to use this proxy server.
 
-1.  In your WebUI, navigate to **Settings** -> **Admin Settings** -> **Connections**.
-2. Add or modify the Ollama API URL:
+1.  In your WebUI, navigate to **Settings**- > **Admin Settings** -> **Connection**.
+2.  Add or modify the Ollama API URL:
     * If this proxy server is running on your **local machine** (same machine as the WebUI or accessible on the local network), use:
       `http://localhost:11435`
       (Ensure `11435` matches the `SERVER_PORT` in your `config.py`.)
@@ -99,9 +75,36 @@ If you are using a WebUI that supports connecting to an Ollama API endpoint, you
       `http://host.docker.internal:11435`
       (This address allows the Docker container to reach services running on the host. Again, ensure the port is correct.)
 
-After saving the settings, you can see your model at the model list.
+After saving the settings, you should be able to select with your model.
 
-## :handshake: Acknowledgments
+## 🧩 Tech Stack
 
-* [Chutes.ai](https://chutes.ai/)
-* [Ollama](https://ollama.com/)
+-   **Core**:
+    -   [Python](https://www.python.org/) (3.8+)
+-   **Asynchronous HTTP**:
+    -   [aiohttp](https://docs.aiohttp.org/en/stable/) (for asynchronous HTTP client/server)
+-   **Concurrency**:
+    -   [asyncio](https://docs.python.org/3/library/asyncio.html) (for asynchronous programming, built into Python)
+
+## 🤝 Contributing
+
+Contributions are always welcome! Whether it's bug reports, feature suggestions, or Pull Requests. If you'd like to contribute, please follow these steps:
+
+1.  Fork this repository.
+2.  Create your feature branch (`git checkout -b feature/AmazingFeature`).
+3.  Commit your changes (`git commit -m 'Add some AmazingFeature'`).
+4.  Push to the branch (`git push origin feature/AmazingFeature`).
+5.  Open a Pull Request.
+
+## 📝 License
+
+This project is distributed under the MIT License. See the `LICENSE` file for more information.
+
+## 🙏 Acknowledgements
+
+* [Chutes.ai](https://chutes.ai/) - For providing the LLM services.
+* [Ollama](https://ollama.com/) - For the API specification this proxy aims to be compatible with.
+
+---
+
+⭐ If you find this project useful, please consider giving it a Star! ⭐
