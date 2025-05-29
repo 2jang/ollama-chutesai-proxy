@@ -1,9 +1,11 @@
 # Ollama-Chutes.ai 프록시 서버 ↔️☁️</h1>
+
 [![Python](https://img.shields.io/badge/Python-3.8+-3776AB?style=for-the-badge&logo=python&logoColor=white)]([https://www.python.org/](https://www.python.org/))
 
 <p>:earth_americas: <a href="https://github.com/2jang/ollama-chutesai-proxy/blob/main/README-ko.md">한국어</a> | <a href="https://github.com/2jang/ollama-chutesai-proxy">English</a></p>
 
 Chutes.ai의 LLM 서비스와 연동되는 Ollama 호환 API 프록시 서버입니다.  
+
 이 프로젝트는 Python과 `aiohttp`로 구축된 비동기 API 서버입니다. 프록시 역할을 하여 Chutes.ai의 대규모 언어 모델(LLM) 서비스로 요청을 전달하는 Ollama 호환 인터페이스를 제공합니다.
 이를 통해 사용자들은 Ollama용으로 설계된 클라이언트(예: WebUI)를 사용하여 Chutes.ai 모델과 상호작용할 수 있습니다. 🚀
 
