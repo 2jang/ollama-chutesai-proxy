@@ -5,6 +5,7 @@
 <p>:earth_americas: <a href="https://github.com/2jang/ollama-chutesai-proxy/blob/main/README-ko.md">한국어</a> | <a href="https://github.com/2jang/ollama-chutesai-proxy">English</a></p>
 
 An Ollama-compatible API proxy server that interfaces with Chutes.ai's LLM services.  
+
 This project is an asynchronous API server built with Python and `aiohttp`. It acts as a proxy, providing an Ollama-compatible interface that forwards requests to Chutes.ai's LLM services.
 This allows users to interact with Chutes.ai models using clients designed for Ollama (like WebUIs). 🚀
 
