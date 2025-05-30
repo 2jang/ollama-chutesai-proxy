@@ -2,7 +2,7 @@
 API_TOKEN = "your_actual_cpk_token_here" # Your Chutes.ai API Token
 
 # --- Server Behavior Configurations ---
-CHUTES_API_URL = "https://llm.chutes.ai/v1/chat/completions"
+API_URL = "https://api.nineteen.ai/v1/chat/completions"
 MODEL_NAME = "deepseek-ai/DeepSeek-V3-0324" # Set your model here
 SERVER_PORT = 11435
 DEFAULT_SYSTEM_PROMPT = """ Ex)You are a helpful assistant """ #Default system prompt, or None if not desired
