@@ -16,7 +16,7 @@ def get_config_value(param_name: str, default_value: Any = None) -> Any:
     return getattr(config, param_name, default_value)
 
 API_TOKEN: str = get_config_value("API_TOKEN")
-if not API_TOKEN or not isinstance(API_TOKEN, str) or not API_TOKEN.startswith("cpk_"):
+if not API_TOKEN or not isinstance(API_TOKEN, str):
     raise SystemExit("[Fatal Error] API_TOKEN is not defined, empty, or invalid in `config.py`.")
 API_URL: str = get_config_value("CHUTES_API_URL")
 MODEL_NAME: str = get_config_value("MODEL_NAME")
@@ -291,7 +291,7 @@ async def init_app() -> web.Application:
 
 async def main():
     """Main function to start the server."""
-    if not API_TOKEN or not API_TOKEN.startswith("cpk_"):
+    if not API_TOKEN:
         print("[Fatal Error] API_TOKEN is not configured correctly in `config.py` or is invalid."); return
 
     app = await init_app()
