@@ -11,6 +11,8 @@ This allows users to interact with Chutes.ai models using clients designed for O
 
 The server handles request transformation, parameter mapping, system prompt injection, message history management, and streams responses back to the client in the Ollama format.
 
+Also, it supports [NineteenAI](https://app.sn19.ai/app), which is fast and free too.
+
 ## ✨ Key Features
 
 - ⚙️ **Easy Configuration**: Setup via `config.py` for API tokens, model names, server port, and default LLM parameters.
