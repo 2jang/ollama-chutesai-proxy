@@ -18,16 +18,11 @@ Also, it supports [NineteenAI](https://app.sn19.ai/app), which is fast and free 
 - ⚙️ **Easy Configuration**: Setup via `config.py` for API tokens, model names, server port, and default LLM parameters.
 - 💨 **Streaming Support**: Handles streaming responses from Chutes.ai and delivers them to the client.
 
-## ❓ What is Chutes.ai?
-
-Chutes.ai is a service that allows you to use various LLMs by making API requests. Many of their models are available for free. Feel free to explore their models!
-
 ## 🚀 Getting Started
 
 ### 📋 Prerequisites
 
 -   **Python**: Make sure you have Python 3.8+ installed.
--   **pip**: Python's package installer, usually comes with Python.
 -   **Chutes.ai API Key**: Obtain an API Key from [Chutes.ai](https://chutes.ai/app/api). This is **required**.
 
 ### 🛠️ Installation Steps
